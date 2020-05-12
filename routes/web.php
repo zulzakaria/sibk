@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('teachers','TeachersController');
+Route::post('teachersImport','TeachersController@import')->name('teachers.import');
+
+Route::get('/studentsMap','StudentsMapController@index')->name('studentsMap.index');
